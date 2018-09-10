@@ -1,5 +1,5 @@
 SubscriptionName         = Free Trial
-VNWKName					 = SentiaVNWK
+VNKName					 = SentiaVNWK
 RGParametersFileLocation = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/FileLocations_RGParameters/RGParameters.txt
 RGTagFileLocation     	 = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/FileLocations_RGParameters/RGTag.txt
 SAtemplate               = https://raw.githubusercontent.com/Eslam10/SentiaDeliverables/master/StorageAccount/SAtemplate.json
