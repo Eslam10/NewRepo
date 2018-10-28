@@ -1,0 +1,163 @@
+
+EJB --> Enterprise Java Beans
+	
+Web Server like Apache --> render pages and stop when rendler, da msh me handle enno yesheel el 7agat el kbeera beta3et el Java.
+			how to render HTML, who login and not.
+			used for redirection --> if you hit url and it is expired, yewadeh le 7etta tany badal ma fel app server hatro7 teshelha men el code.
+
+Application Server (like websphere and weblogic) --> feh el EJB containers, w HTML Pages, Java scripts, w by connect data base.
+
+	JNDI --> 3ayz tet3amel ma3a file system (server), create esm w 7ot feh el details and in the code just put the JNDI name instead of full details in the code.
+
+	handle business logic --> how to connect to database and retrieve data, integration between domains (like JMS)
+
+	
+weblogic domain modes:
+----------------------
+
+1- development mode --> for developers, feature called auto deploy, change code in auto deploy location then refresh and test directly.
+			changes take affects directly, mafesh 7aga esmaha lock and edit
+
+2- production mode --> 	only there is an admin server, (admin server el mafrood yet7at 3aleh el console w 5alas 2y 7aga tany (apps) teb2a mn el managed server)
+			yeb2a el code exist in managed server not on admin server.
+			feh lock 2wel mated5ol, 3ashan ma7adesh tany yed5ol ye change, then after finishing --> edit.
+		
+Admin server is to manage the managed servers
+
+
+Node Manager:
+-------------
+
+1 node manager for each machine (el machine can control 2ktar mn managed server)
+
+from the order of admin server --> get status of servers, start/stop managed server.
+
+
+clusters:
+-----------
+exist for failover, if u have 10 manage server --> w wa7ed we2e3 kda el session elly gaya 3ala el managed server de hato2a3.
+	yeb2a el request (session) yetbe3t lel cluster --> cluster take copies from session S1 to managed server1, S2 to managed server2, ...  
+		3ashan low managed server we2e3, yero7 le S2.
+			el kalam da byed5ol feh el admin server.
+
+you can start managed server through 
+	1- GUI --> Node Manager must be up and running
+	2- command line --> startmanagedweblogic.sh (script)
+	3- from wlst command --> 1- connect to admin server then start managed server.
+	          		 2- connect to node manager then start mangede server.
+	
+Admin Server start:
+	1- NO GUI.
+	2- command line --> startweblogic.sh script
+	3- using wlst command.	
+
+======================================================================================================================================================================================================
+
+managed server startup arguments
+--------------------------------
+arguments are from config files or intialization variables.
+
+xms --> minimum amount of RAM to be given for this server.
+xmx --> maximum amount ..............
+
+BootIdentityFIle --> file that has username and passwd.
+
+managed server config:
+-----------------------
+each managed server has 3 ports
+	normal listen port
+	ssl listen port
+	admin listen port --> when you deploy an app and it has a bug, how can you test this app --> this is by using admin port (el normal user mesh byshofha)
+
+class path --> jar files that managed server run on it.
+	if you need to add a jar file in class Path --> put it in config.xml 
+
+arguments --> if for ex you have t set xms=xmx=... --> put it in arguments
+
+logging --> server1.log --> any log related to weblogic error
+	    server1.out --> any log related to application
+
+monitoring --> JDBC 
+
+env variables:
+--------------
+server name, bootidentityfile
+	if weblogic failed due to auth --> check boot file may be corrupted.
+
+
+imp directories under server:
+-------------------------------
+stage --> how to deploy application.
+
+sysman --> applications.
+
+security --> boot file
+
+tmp, cache dir can be deleted. but applications may be in tmp for some cases
+
+====================================================================================================
+
+managed server status:
+----------------------
+unkown --> config file has smthng wrong.
+force shutdown.
+
+
+
+
+
+
+
+
+
+
+
+
+Deployment types:
+-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
